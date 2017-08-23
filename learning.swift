@@ -43,4 +43,35 @@ for score in scores{
     print(score)
 }
 
+// Condicionales
+let numbers = [1,2,3,4,5]
+for number in numbers{
+    if number%2 == 0 {
+      print("El numero \(number) es par")
+    }
+    else{
+      print("El numero \(number) es impar")
+    }
+}
+
+
+//Trabajando con nil
+var vacio = ""
+var cero = 0
+print ( vacio == nil )
+print ( cero == nil )
+
+let nickName: String? = nil
+let fullName: String = "carlogilmar"
+
+print("Hi \(nickName ?? fullName)")
+
+
+
+
+
+
+
+
+
 
