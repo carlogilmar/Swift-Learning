@@ -21,3 +21,14 @@ for i in 1..<4{
 for i in 1...4{
   print("Loop \(i)")
 }
+
+print("Closures en swift")
+
+func greet(person:String, day:String) ->
+  String{
+    return "[\(day)] Holi \(person)"
+  }
+
+print (greet(person:"Carlogilmaar", day:"Lunes"))
+
+
