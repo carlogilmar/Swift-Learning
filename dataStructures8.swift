@@ -1,14 +1,14 @@
 // Stack
 
-public struct Stack<T>{
+public struct Stack<T> {
   private var elements = [T]()
-  public init(){}
+  public init() {}
 
   public mutating func pop() -> T?{
     return self.elements.popLast()
   }
 
-  public mutating func push(element:T){
+  public mutating func push(element: T){
     self.elements.append(element)
   }
 
@@ -16,15 +16,26 @@ public struct Stack<T>{
     return self.elements.last
   }
 
-  public func isEmpty:Bool{
+  public func isEmpty() -> Bool {
     return self.elements.isEmpty
   }
 
-  public var count:Int{
+  public var count: Int {
     return self.elements.count
   }
 }
 
 var myStack = Stack<Int>()
-
+myStack.push(element:1)
+myStack.push(element:2)
+myStack.push(element:3)
+myStack.push(element:4)
+myStack.push(element:5)
+print(myStack)
+print("Stack size: \(myStack.count)")
+var x = myStack.pop()
+x = myStack.pop()
+x = myStack.pop()
+print(myStack)
+print("Stack size: \(myStack.count)")
 
