@@ -39,3 +39,39 @@ x = myStack.pop()
 print(myStack)
 print("Stack size: \(myStack.count)")
 
+
+// Protocols
+
+extension Stack: CustomStringConvertible, CustomDebugStringConvertible {
+  public var description: String{
+    return self.elements.description
+  }
+  public var debugDescription: String{
+    return self.elements.debugDescription
+  }
+}
+
+extension ArrayStack: ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: T...) {
+    self.init(elements)
+  }
+}
+
+public struct ArrayIterator<T> : IteratorProtocol {
+  var currentElements: [T]
+  init(elements: [T]){
+    self.currentElement = elements
+  }
+  mutating public func next() -> T?{
+    if(!self.currentElement.isEmpty){
+      return self.currentElement.popLast()
+    }
+    return nil
+  }
+}
+
+extension Stack: Sequence{
+  public func makeIterator() -> ArrayIterator<T> {
+    return ArrayIterator<T>(elements:self.elements)
+  }
+}
