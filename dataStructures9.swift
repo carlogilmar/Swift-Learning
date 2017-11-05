@@ -77,10 +77,11 @@ extension Queue: ExpressibleByArrayLiteral {
 }
 
 var queue2: Queue<Int> = [1,2,3,5]
+queue2.enqueue(element: 100)
 print(queue2)
 
-
-
+var queue3 = Queue<Int>([1,2,3,4])
+print(queue3)
 
 
 
