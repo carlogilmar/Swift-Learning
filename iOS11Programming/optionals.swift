@@ -11,14 +11,21 @@ enum OurOptional<T>{
     self = .none
   }
 
+  func unwarp() -> T {
+    switch self {
+      case .some(let x):
+        return x
+      case .none:
+        fatalError()
+    }
+  }
+
 }
 
 var ourOptionalString = OurOptional("Hello") // some("hello")
 var outNilString = OurOptional<String>() // none
+let string = ourOptionalString.unwarp()
 
-/*
-    In this case
- */
 
 struct Person{
   var givenName: String
@@ -26,7 +33,10 @@ struct Person{
   var surname: String
 
   var fullName: String {
-    return "\(givenName) \(middleName!) \(surname)"
+    if let middleNameUnwarpped = middleName {
+    return "Unwrapper \(givenName) \(middleNameUnwarpped) \(surname)"
+    }
+    return "Without middlename! \(givenName) \(surname)"
   }
 }
 
