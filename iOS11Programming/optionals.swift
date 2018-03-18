@@ -33,9 +33,13 @@ struct Person{
   var surname: String
 
   var fullName: String {
+    /* Using operator */
+    return "Unwrapper \(givenName) \(middleName ?? "<- ->") \(surname)"
+
+
     /*Using guard*/
-    guard let middleNameUnwarpped = middleName else { return "Without middlename! \(givenName) \(surname)" }
-    return "Unwrapper \(givenName) \(middleNameUnwarpped) \(surname)"
+    //guard let middleNameUnwarpped = middleName else { return "Without middlename! \(givenName) \(surname)" }
+    //return "Unwrapper \(givenName) \(middleNameUnwarpped) \(surname)"
 
     /* Using if */
     //if let middleNameUnwarpped = middleName {
@@ -45,7 +49,7 @@ struct Person{
   }
 }
 
-let mike = Person(givenName:"carlo", middleName:"gilmar", surname:"PS")
+let mike = Person(givenName:"carlo1", middleName:"gilmar", surname:"PS")
 print(mike.fullName)
-let mike1 = Person(givenName:"carlo", middleName:nil, surname:"PS")
-print(mike.fullName)
+let mike1 = Person(givenName:"carlo2", middleName:nil, surname:"PS")
+print(mike1.fullName)
