@@ -39,7 +39,10 @@ Asymptotic Analysis
 Quadratic Running Time T(n) = c * (n^2) + K
 Linearithmic Running Time T(n) = c * n * Log2(x) + k
 Asymptotic Notation: BigO
-*/
 
+
+Class: Reference Types
+Structs: Value Types
+*/
 
 
