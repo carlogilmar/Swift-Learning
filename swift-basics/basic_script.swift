@@ -23,4 +23,23 @@ class LinkedList<T>{ // <T> is a Generic: Type the class
 /*
  Data Structures: array, sorted array, queue, stack, list, hash table, heap, trie, binary tree,
 red-black tree, R-tree, graph
+
+Swift: value types and reference types
+
+Value types: Data Types and Enums
+Reference types: Classes and closures
+
+
+Types: named and compound
+Names: classes, enums, protocols, structures
+Compound: Functions, tuples
+
+Asymptotic Analysis
+==================
+Quadratic Running Time T(n) = c * (n^2) + K
+Linearithmic Running Time T(n) = c * n * Log2(x) + k
+Asymptotic Notation: BigO
 */
+
+
+
