@@ -36,3 +36,20 @@ detail["twitter"]="@carlogilmar"
 detail["github"]="carlogilmar"
 
 myMap["me"] = detail
+
+
+/*
+=========================
+       SETS
+=========================
+*/
+
+var mySet = Set<Int>()
+var groupA:Set<Int> = [1,2,3,4,5]
+var groupB:Set<Int> = [4,5,6,7,8]
+var groupC:Set<Int> = [1,4,9,10,1]
+
+groupA.union(groupB)
+groupA.intersection(groupB)
+groupA.symmetricDifference(groupB)
+
