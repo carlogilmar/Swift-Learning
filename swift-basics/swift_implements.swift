@@ -46,3 +46,14 @@ struct CoolStack{
     return self.stackArray.popLast()!
   }
 }
+
+struct CoolStack<T> {
+  var stack:[T] = []
+  mutating func push(element:T){
+    self.stack.append(element)
+  }
+  func show() -> [T]{
+    return stack
+  }
+}
+
