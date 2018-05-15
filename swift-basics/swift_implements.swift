@@ -31,7 +31,7 @@ peek -> primer elemento
 
 */
 
-struct CoolStack{
+struct IntegerStack{
   var stackArray:[Int] = []
   func show() -> [Int]{
     return stackArray
@@ -47,6 +47,8 @@ struct CoolStack{
   }
 }
 
+// var myStack = IntegerStack()
+
 struct CoolStack<T> {
   var stack:[T] = []
   mutating func push(element:T){
@@ -56,4 +58,20 @@ struct CoolStack<T> {
     return stack
   }
 }
+
+// var myStack = CoolStack<Int>()
+// var myStack = CoolStack<Any>()
+// var myStack = CoolStack<String>()
+
+
+
+
+
+
+
+
+
+
+
+
 
