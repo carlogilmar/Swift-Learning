@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 import Files
-import CommandLineToolCore
+import CommandLineCore
 
 class CommandLineToolTests: XCTestCase {
     func testCreatingFile() throws {
