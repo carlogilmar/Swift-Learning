@@ -7,7 +7,7 @@ let package = Package(
     name: "CommandLineTool",
     dependencies: [
       .package( url: "https://github.com/johnsundell/files.git",
-                version: "1.0.0")
+                from: "1.0.0")
     ],
     targets: [
         .target(
