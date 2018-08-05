@@ -6,12 +6,14 @@ import PackageDescription
 let package = Package(
     name: "CommandLineTool",
     dependencies: [
+      .package( url: "https://github.com/johnsundell/files.git",
+                version: "1.0.0")
     ],
     targets: [
         .target(
             name: "CommandLineTool",
             dependencies: ["CommandLineCore"]
         ),
-        .target(name: "CommandLineCore")
+        .target(name: "CommandLineCore", dependencies: ["Files"])
     ]
 )
